@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="{% static 'regularExpressionsSite/css/style.css' %}">
+</head>
+<body>
+    <div class="auth-container">
+        <h1>регистрация</h1>
+
+        {% if form.errors %}
+            <div class="error">
+                <strong>ошибки:</strong>
+                {% for field in form %}
+                    {% for error in field.errors %}
+                        <p>{{ error }}</p>
+                    {% endfor %}
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="id_username">имя</label>
+                <input type="text" name="username" id="id_username" class="form-input" required>
+                <small class="form-text">до 150 символов, только буквы и цифры</small>
+            </div>
+            <div class="form-group">
+                <label for="id_password1">пароль</label>
+                <input type="password" name="password1" id="id_password1" class="form-input" required>
+                <small class="form-text">минимум 8 символов</small>
+            </div>
+            <div class="form-group">
+                <label for="id_password2">подтверждение</label>
+                <input type="password" name="password2" id="id_password2" class="form-input" required>
+            </div>
+            <button type="submit" class="btn-submit">создать аккаунт</button>
+        </form>
+        <p>уже есть аккаунт? <a href="{% url 'login' %}">войти</a></p>
+    </div>
+</body>
+</html>

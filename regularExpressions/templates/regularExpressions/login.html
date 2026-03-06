@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход</title>
+    <link rel="stylesheet" href="{% static 'regularExpressionsSite/css/style.css' %}">
+</head>
+<body>
+    <div class="auth-container">
+        <h1>вход</h1>
+
+        {% if form.errors %}
+            <div class="error">
+                <p>неверное имя или пароль</p>
+            </div>
+        {% endif %}
+
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="id_username">имя</label>
+                <input type="text" name="username" id="id_username" class="form-input" required>
+            </div>
+            <div class="form-group">
+                <label for="id_password">пароль</label>
+                <input type="password" name="password" id="id_password" class="form-input" required>
+            </div>
+            <button type="submit" class="btn-submit">войти</button>
+        </form>
+        <p>нет аккаунта? <a href="{% url 'register' %}">создать</a></p>
+    </div>
+</body>
+</html>

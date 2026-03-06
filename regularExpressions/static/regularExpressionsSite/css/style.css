@@ -1,0 +1,477 @@
+/* Импорт стильных шрифтов */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+background: #020024;
+background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 50%, rgba(0, 0, 0, 1) 100%);
+    min-height: 100vh;
+    padding: 20px;
+    color: #2d3748;
+}
+
+/* Стильная навигация */
+.user-nav {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    z-index: 1000;
+    background: white;
+    padding: 12px 24px;
+    border-radius: 50px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.user-nav span {
+    color: #4a5568;
+    font-weight: 500;
+    background: #f7fafc;
+    padding: 6px 12px;
+    border-radius: 30px;
+    font-size: 14px;
+}
+
+.btn-nav {
+    text-decoration: none;
+    background: #020024;
+background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-nav:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+}
+
+/* Основной контейнер с красивым оформлением */
+.container {
+    max-width: 900px;
+    margin: 80px auto 40px;
+    background: rgba(000, 000, 000, 0);
+    padding: 20px;
+    border-radius: 30px;
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 700;
+    background: #080202;
+    background: linear-gradient(90deg, rgba(8, 2, 2, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 30px;
+    text-align: center;
+    letter-spacing: -0.5px;
+}
+
+/* Стилизация форм */
+.form-group {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #4a5568;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 15px 20px;
+    border: 2px solid #e2e8f0;
+    border-radius: 15px;
+    font-size: 15px;
+    font-family: 'Fira Code', monospace;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    transform: translateY(-2px);
+}
+
+textarea.form-input {
+    min-height: 150px;
+    resize: vertical;
+    line-height: 1.6;
+}
+
+/* Стилизация file input */
+input[type="file"] {
+    padding: 10px;
+    background: #f7fafc;
+    border: 2px dashed #cbd5e0;
+}
+
+input[type="file"]::file-selector-button {
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    margin-right: 20px;
+    transition: all 0.3s ease;
+}
+
+input[type="file"]::file-selector-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.form-text {
+    font-size: 12px;
+    color: #718096;
+    margin-top: 8px;
+    display: block;
+    font-style: italic;
+}
+
+/* Кнопка с градиентом */
+.btn-submit {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 16px 40px;
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+    width: 100%;
+    letter-spacing: 0.5px;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.6);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+}
+
+/* Результаты с красивым оформлением */
+.results {
+    margin-top: 50px;
+    padding: 30px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #f3f4f6 100%);
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.5);
+}
+
+.results h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.results h2::before {
+    content: "🎯";
+    font-size: 28px;
+}
+
+/* Карточки совпадений */
+.match {
+    background: white;
+    border-radius: 15px;
+    padding: 18px 22px;
+    margin: 15px 0;
+    font-family: 'Fira Code', monospace;
+    font-size: 14px;
+    color: #2d3748;
+    border-left: 6px solid #667eea;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    list-style: none;
+    word-break: break-all;
+}
+
+.match:hover {
+    transform: translateX(10px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.15);
+    border-left-color: #764ba2;
+}
+
+/* Счетчик совпадений */
+.match-counter {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 500;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+/* Сообщения */
+.messages {
+    margin-bottom: 30px;
+}
+
+.alert {
+    padding: 18px 25px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    font-size: 15px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.alert-success {
+    background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+    color: #1e4620;
+    border-left: 6px solid #2e7d32;
+}
+
+.alert-error {
+    background: linear-gradient(135deg, #feb692 0%, #ff6e7f 100%);
+    color: #7f1d1d;
+    border-left: 6px solid #c62828;
+}
+
+/* Ошибки */
+.error {
+    background: linear-gradient(135deg, #ffb199 0%, #ff0844 100%);
+    padding: 25px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    color: white;
+    font-weight: 500;
+    box-shadow: 0 10px 30px rgba(255, 8, 68, 0.2);
+}
+
+.error strong {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.error p {
+    margin: 8px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+.error p::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: white;
+}
+
+/* Статусные сообщения */
+.no-matches, .info {
+    padding: 40px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 20px;
+    background: white;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.no-matches {
+    color: #c62828;
+    background: #ffebee;
+    border: 2px dashed #ef5350;
+}
+
+.info {
+    color: #1565c0;
+    background: #e3f2fd;
+    border: 2px dashed #42a5f5;
+}
+
+/* Аутентификация */
+.auth-container {
+    max-width: 450px;
+    margin: 100px auto;
+    background: white;
+    padding: 50px 40px;
+    border-radius: 40px;
+    box-shadow: 0 30px 70px rgba(0,0,0,0.2);
+    border: 1px solid rgba(255,255,255,0.3);
+    backdrop-filter: blur(10px);
+}
+
+.auth-container h1 {
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+.auth-container p {
+    text-align: center;
+    margin-top: 30px;
+    color: #718096;
+    font-size: 15px;
+}
+
+.auth-container a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.auth-container a:hover {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-decoration: none;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 25px;
+        margin: 60px auto 20px;
+    }
+
+    .auth-container {
+        margin: 40px auto;
+        padding: 30px 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .user-nav {
+        padding: 8px 16px;
+    }
+
+    .btn-nav {
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+
+    .match {
+        padding: 15px;
+        font-size: 13px;
+    }
+
+    .match:hover {
+        transform: translateX(5px);
+    }
+}
+
+/* Анимации */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(102, 126, 234, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(102, 126, 234, 0);
+    }
+}
+
+.btn-submit:focus {
+    animation: pulse 1.5s infinite;
+}
+
+/* Декоративные элементы */
+.container::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 40px;
+    z-index: -1;
+    opacity: 0.3;
+    filter: blur(20px);
+}
+
+.container {
+    position: relative;
+}
+
+/* Стили для списка */
+ul {
+    list-style: none;
+}
+
+/* Красивые подсказки */
+.form-group::after {
+    content: "✨";
+    position: absolute;
+    right: 20px;
+    bottom: 15px;
+    opacity: 0.3;
+    font-size: 18px;
+    pointer-events: none;
+}
+
+.form-group:focus-within::after {
+    opacity: 1;
+    animation: sparkle 1s ease infinite;
+}
+
+@keyframes sparkle {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
