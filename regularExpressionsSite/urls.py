@@ -14,7 +14,6 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-# project/urls.py
 from django.contrib import admin
 from django.urls import path, include
 
@@ -23,8 +22,5 @@ urlpatterns = [
     path("", include("regularExpressions.urls")),
 ]
 
-# Куда перекидывать после входа
 LOGIN_REDIRECT_URL = 'index'
-
-# Куда перекидывать после выхода (Logout)
 LOGOUT_REDIRECT_URL = 'login'

@@ -57,7 +57,7 @@
                        id="regex"
                        class="form-input"
                        value="{{ request.POST.regex|default:'' }}"
-                       placeholder="/pattern/flags">
+                       placeholder="/d">
             </div>
 
             <div class="form-group">
@@ -67,7 +67,6 @@
                           class="form-input"
                           placeholder="Введите текст для проверки...">{{ request.POST.test_string|default:'' }}</textarea>
             </div>
-
             <div class="form-group">
                 <label for="file">Файл</label>
                 <input type="file"

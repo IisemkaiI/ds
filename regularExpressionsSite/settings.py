@@ -103,12 +103,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'
-# После всех остальных настроек, в конец файла или в удобное место
 
 STATICFILES_DIRS = [BASE_DIR / 'static']
 
-# После входа или выхода автоматически перекидывать на главную
-LOGIN_REDIRECT_URL = '/'     # После входа (login) — переходит на главную страницу
-LOGOUT_REDIRECT_URL = '/'    # После выхода (logout) — тоже на главную
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
 
 
